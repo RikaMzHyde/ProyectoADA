@@ -159,13 +159,78 @@ $ Final step
 
 ## Funcionamiento
 
-A few examples of useful commands and/or tasks.
+Al abrir el programa nos encontraremos con una interfaz gráfica por la que podemos navegar dependiendo de la tabla que deseemos modificar:
 
-```
-$ First example
-$ Second example
-$ And keep this in mind
-```
+### Empleados
+
+En este formulario gestionaremos la tabla Empleados mediante el uso de diferentes botones. También podemos realizar una búsqueda de empleados según su ID.
+
+<details><summary><b>Mostrar uso de componentes</b></summary>
+
+1. TextBox "ID": Mediante éste podemos ver tanto el ID del empleado que tenemos seleccionado en cada momento como introducir un ID de empleado concreto para mostrarlo a través del botón "Buscar".
+
+2. Botón "Buscar": Aparece desactivado hasta que introducimos una ID o seleccionamos a un empleado. Sirve para buscar un empleado concreto y mostrarlo de forma individual (Su uso está ligado al Textbox ID antes mencionado).
+
+3. Botón "Mostrar Todos": Al pulsar en él, nos aparece una lista completa de todos los empleados que tenemos en nuestra Base de Datos.
+
+4. Botón "Añadir Empleado": Usado para añadir un nuevo empleado. Al pulsar nos aparece una nueva ventana en la que podemos añadir los diferentes campos para crear un nuevo empleado: Nombre (obligatorio), Apellido (obligatorio), Departamento(obligatorio), Puesto, Teléfono, Email, Fecha Nacimiento (obligatorio).
+
+5. Botón "Modificar Empleado": Permite modificar los datos del empleado seleccionado mediante la tabla o ID del TextBox (Por defecto aparece deshabilitado hasta que seleccionamos un empleado).
+
+6. Botón "Eliminar Empleado": Borra un empleado de la Base de Datos, para ello tenemos que seleccionar el empleado o poner su ID en el TextBox y después pulsar el botón (Por defecto aparece deshabilitado hasta que seleccionamos un empleado).
+
+7. Botón "Exportar datos BD": Se utiliza para exportar los datos de la Base de Datos a un fichero txt o csv. Al hacer click en él aparece una ventana que nos indica el formato en el que queremos exportar los datos, el nombre que queremos darle al fichero y dónde queremos guardarlo.
+
+8. Botón "Importar datos BD": Se usa para importar datos desde un fichero txt o csv a la Base de Datos.
+
+9. Botón "Mostrar Proyectos": Nos indica los proyectos que tienen asignados cada empleado, solo tenemos que seleccionarlo de la lista o poner su ID en el TextBox (Por defecto aparece deshabilitado hasta que seleccionamos un empleado).
+
+10. Botones "Editar" y "Borrar" de la Tabla: Hacen la misma función que los botones "Editar" y "Borrar" pero sin necesidad de seleccionar al empleado, ya que ambos botones están vinculados a cada empleado de manera individual.
+
+</details>
+
+### Departamentos
+
+En este formulario gestionaremos la tabla Departamentos mediante el uso de diferentes botones. También podemos realizar una búsqueda de departamentos según su ID.
+
+<details><summary><b>Mostrar uso de componentes</b></summary>
+
+1. TextBox "ID": Mediante éste podemos ver tanto el ID del departamento que tenemos seleccionado en cada momento como introducir un ID de departamento concreto para mostrarlo a través del botón "Buscar".
+
+2. Botón "Buscar": Aparece desactivado hasta que introducimos una ID o seleccionamos un departamento. Sirve para buscar un departamento concreto y mostrarlo de forma individual (Su uso está ligado al Textbox ID antes mencionado).
+
+3. Botón "Mostrar Todos": Al pulsar en él, nos aparece una lista completa de todos los departamentos que tenemos en nuestra Base de Datos.
+
+4. Botón "Añadir Departamento": Usado para añadir un nuevo departamento. Al pulsar nos aparece una nueva ventana en la que podemos especificar el nombre del nuevo departamento: Nombre (obligatorio).
+
+5. Botón "Modificar Departamento": Permite modificar los datos del departamento seleccionado mediante la tabla o ID del TextBox (Por defecto aparece deshabilitado hasta que seleccionamos un departamento).
+
+6. Botón "Eliminar Departamento": Borra un departamento de la Base de Datos, para ello tenemos que seleccionar el departamento o poner su ID en el TextBox y después pulsar el botón. Cabe destacar que debido a la relación que tiene con la tabla Empleados, no es posible borrar un Departamento que tenga empleados en él, para ello tendríamos que ir a la pestaña "Empleados" y modificar el Departamento asignado a dicho empleado o borrar directamente al empleado. (Por defecto aparece deshabilitado hasta que seleccionamos un departamento).
+
+</details>
+
+### Proyectos
+
+En este formulario gestionaremos la tabla Proyectos mediante el uso de diferentes botones. También podemos realizar una búsqueda de proyectos según su ID.
+
+<details><summary><b>Mostrar uso de componentes</b></summary>
+
+1. TextBox "ID": Mediante éste podemos ver tanto el ID del proyecto que tenemos seleccionado en cada momento como introducir un ID de proyecto concreto para mostrarlo a través del botón "Buscar".
+
+2. Botón "Buscar": Aparece desactivado hasta que introducimos una ID o seleccionamos un proyecto. Sirve para buscar un proyecto concreto y mostrarlo de forma individual (Su uso está ligado al Textbox ID antes mencionado).
+
+3. Botón "Mostrar Todos": Al pulsar en él, nos aparece una lista completa de todos los proyectos que tenemos en nuestra Base de Datos.
+
+4. Botón "Añadir Proyecto": Usado para añadir un nuevo proyecto. Al pulsar nos aparece una nueva ventana en la que podemos especificar los campos que tendrá el nuevo proyecto: Nombre (obligatorio), Descripción, Fecha Inicio(obligatorio), Fecha Fin.
+
+5. Botón "Modificar Proyecto": Permite modificar los datos del proyecto seleccionado mediante la tabla o ID del TextBox (Por defecto aparece deshabilitado hasta que seleccionamos un proyecto).
+
+6. Botón "Eliminar Proyecto": Borra un proyecto de la Base de Datos, para ello tenemos que seleccionar el proyecto o poner su ID en el TextBox y después pulsar el botón. Cabe destacar que debido a la relación que tiene con la tabla Empleados, no es posible borrar un Proyecto que tenga empleados en él, para ello tendríamos que ir al botón "Asignar Empleado" que ahora explicaremos. (Por defecto aparece deshabilitado hasta que seleccionamos un departamento).
+
+7. Botón "Asignar Empleado": Utilizado para asignar o retirar empleados de un proyecto. Para ello, primero tenemos que seleccionar un proyecto de la tabla o especificar su ID en el TextBox.
+   
+</details>
+
 
 ## Additional Documentation and Acknowledgments
 
@@ -173,3 +238,5 @@ $ And keep this in mind
 * Confluence link:
 * Asana board:
 * etc...
+
+
