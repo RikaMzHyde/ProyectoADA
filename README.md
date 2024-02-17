@@ -227,7 +227,7 @@ En este formulario gestionaremos la tabla Proyectos mediante el uso de diferente
 
 6. Botón "Eliminar Proyecto": Borra un proyecto de la Base de Datos, para ello tenemos que seleccionar el proyecto o poner su ID en el TextBox y después pulsar el botón. Cabe destacar que debido a la relación que tiene con la tabla Empleados, no es posible borrar un Proyecto que tenga empleados en él, para ello tendríamos que ir al botón "Asignar Empleado" que ahora explicaremos. (Por defecto aparece deshabilitado hasta que seleccionamos un departamento).
 
-7. Botón "Asignar Empleado": Utilizado para asignar o retirar empleados de un proyecto. Para ello, primero tenemos que seleccionar un proyecto de la tabla o especificar su ID en el TextBox.
+7. Botón "Asignar Empleado": Utilizado para asignar o retirar empleados de un proyecto. Para ello, primero tenemos que seleccionar un proyecto de la tabla o especificar su ID en el TextBox, después, utilizando los checkboxes de cada empleado podemos asignarlos al proyecto que hayamos seleccionado.
    
 </details>
 
