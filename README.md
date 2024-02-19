@@ -9,19 +9,25 @@ Este proyecto ha sido creado con la finalidad de desarrollar un Sistema de Gesti
 ### Script utilizado para crear las tablas
 
 ```
+-- Crear la base de datos proyecto
+CREATE DATABASE IF NOT EXISTS proyecto;
+
+-- Usar la base de datos proyecto
+USE proyecto;
+
 -- Eliminar tablas si existen
 DROP TABLE IF EXISTS Empleado_Proyecto;
 DROP TABLE IF EXISTS Empleado;
 DROP TABLE IF EXISTS Proyecto;
 DROP TABLE IF EXISTS Departamento;
 
--- Crear tabla Departamentos
+-- Crear tabla de Departamentos
 CREATE TABLE Departamento (
     id_departamento INT AUTO_INCREMENT PRIMARY KEY,
     nombre_departamento VARCHAR(50) NOT NULL
 );
 
--- Crear tabla Empleados
+-- Crear tabla de Empleados
 CREATE TABLE Empleado (
     id_empleado INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -34,7 +40,7 @@ CREATE TABLE Empleado (
     FOREIGN KEY (id_departamento) REFERENCES Departamento(id_departamento)
 );
 
--- Crear tabla Proyectos
+-- Crear tabla de Proyectos
 CREATE TABLE Proyecto (
     id_proyecto INT AUTO_INCREMENT PRIMARY KEY,
     nombre_proyecto VARCHAR(100) NOT NULL,
@@ -52,7 +58,7 @@ CREATE TABLE Empleado_Proyecto (
     FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
 );
 
--- Insertar Departamentos
+-- Insertar 8 departamentos adicionales con nombres ficticios pero coherentes
 INSERT INTO Departamento (nombre_departamento) VALUES
     ('Desarrollo de Productos'),
     ('Investigación de Mercado'),
@@ -63,7 +69,7 @@ INSERT INTO Departamento (nombre_departamento) VALUES
     ('Calidad y Control'),
     ('Administración');
 
--- Insertar Empleados
+-- Insertar 30 empleados adicionales (datos ficticios pero coherentes)
 INSERT INTO Empleado (nombre, apellido, fecha_nacimiento, id_departamento, puesto, email, telefono) VALUES
     ('Gabriel', 'Ramírez', '1993-05-20', 1, 'Ingeniero de Software', 'gabriel.ramirez@gmail.com', '611 223 344'),
     ('Verónica', 'Díaz', '1985-08-15', 2, 'Analista de Mercado', 'veronica.diaz@outlook.com', '655 667 788'),
@@ -97,7 +103,7 @@ INSERT INTO Empleado (nombre, apellido, fecha_nacimiento, id_departamento, puest
     ('Fernando', 'Vega', '1989-09-28', 6, 'Ejecutivo de Desarrollo de Negocios', 'fernando.vega@gmail.com', '677 445 566');
 
 
--- Insertar datos en Proyectos
+	-- Insertar datos ficticios en la tabla de Proyectos
 INSERT INTO Proyecto (nombre_proyecto, descripcion, fecha_inicio, fecha_fin) VALUES
     ('Implementación de CRM', 'Implementación de un sistema CRM para mejorar la gestión de relaciones con los clientes', '2023-10-15', '2024-03-31'),
     ('Lanzamiento de Producto XYZ', 'Planificación y ejecución del lanzamiento del producto XYZ en el mercado nacional', '2024-01-15', '2024-06-30'),
@@ -110,7 +116,7 @@ INSERT INTO Proyecto (nombre_proyecto, descripcion, fecha_inicio, fecha_fin) VAL
     ('Implementación de Sistema de Gestión', 'Implementación de un sistema de gestión integrado para mejorar la eficiencia operativa en todas las áreas de la empresa', '2024-07-01', '2025-02-28'),
     ('Estrategia de Marketing Digital', 'Desarrollo e implementación de una estrategia integral de marketing digital para aumentar la visibilidad de la marca en línea', '2024-08-15', '2025-03-15');
 
--- Insertar asignación de empleados-proyectos
+-- Insertar la asignación de empleados a proyectos
 INSERT INTO Empleado_Proyecto (id_empleado, id_proyecto) VALUES
     (1, 1),
     (2, 2),
@@ -185,7 +191,9 @@ En este formulario gestionaremos la tabla Empleados mediante el uso de diferente
 
 9. Botón "Mostrar Proyectos": Nos indica los proyectos que tienen asignados cada empleado, solo tenemos que seleccionarlo de la lista o poner su ID en el TextBox (Por defecto aparece deshabilitado hasta que seleccionamos un empleado).
 
-10. Botones "Editar" y "Borrar" de la Tabla: Hacen la misma función que los botones "Editar" y "Borrar" pero sin necesidad de seleccionar al empleado, ya que ambos botones están vinculados a cada empleado de manera individual.
+10. TextBoxes Nombre, Apellidos, Puesto, Departamento y Botón "Filtrar": Mediante ellos podemos hacer una búsqueda filtrada de nuestros empleados según el nombre, apellidos, puesto y departamento. Los filtros son acumulativos, ya que puedo filtrar a la vez por nombre y puesto, por ejemplo o poner un valor en cada textbox para realizar una búsqueda más precisa, y es posible realizar una búsqueda parcial o fragmentaria, es decir, si quiero buscar empleados cuyo nombre contenga la cadena de caracteres "na" en su nombre solo tengo que poner "na" en el buscador del Nombre y me aparecerán todos los resultados en los que "na" sea parte del nombre. Ésto también es útil para buscar analistas, por ejemplo, ya que pueden haber de varios tipos y si en el puesto especifico "Analista" me saldrán todos los empleados que lo sean, independientemente de si son de mercado, financiero, etc.
+    
+12. Botones "Editar" y "Borrar" de la Tabla: Hacen la misma función que los botones "Modificar" y "Eliminar" pero sin necesidad de seleccionar al empleado, ya que ambos botones están vinculados a cada empleado de manera individual.
 
 </details>
 
@@ -227,7 +235,7 @@ En este formulario gestionaremos la tabla Proyectos mediante el uso de diferente
 
 6. Botón "Eliminar Proyecto": Borra un proyecto de la Base de Datos, para ello tenemos que seleccionar el proyecto o poner su ID en el TextBox y después pulsar el botón. Cabe destacar que debido a la relación que tiene con la tabla Empleados, no es posible borrar un Proyecto que tenga empleados en él, para ello tendríamos que ir al botón "Asignar Empleado" que ahora explicaremos. (Por defecto aparece deshabilitado hasta que seleccionamos un departamento).
 
-7. Botón "Asignar Empleado": Utilizado para asignar o retirar empleados de un proyecto. Para ello, primero tenemos que seleccionar un proyecto de la tabla o especificar su ID en el TextBox, después, utilizando los checkboxes de cada empleado podemos asignarlos al proyecto que hayamos seleccionado.
+7. Botón "Asignar/Retirar Empleados": Utilizado para asignar o retirar empleados de un proyecto. Para ello, primero tenemos que seleccionar un proyecto de la tabla o especificar su ID en el TextBox, después, utilizando los checkboxes de cada empleado podemos asignarlos al proyecto que hayamos seleccionado.
    
 </details>
 
