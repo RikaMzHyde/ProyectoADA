@@ -152,16 +152,8 @@ INSERT INTO Empleado_Proyecto (id_empleado, id_proyecto) VALUES
 
 ### Instalación
 
-* Meterse en carpeta x y hacer noseque
+* 
 
-
-A step by step guide that will tell you how to get the development environment up and running.
-
-```
-$ Primero ...
-$ Another step
-$ Final step
-```
 
 ## Funcionamiento
 
@@ -240,11 +232,9 @@ En este formulario gestionaremos la tabla Proyectos mediante el uso de diferente
 </details>
 
 
-## Additional Documentation and Acknowledgments
+## Autor y Contacto
 
-* Project folder on server:
-* Confluence link:
-* Asana board:
-* etc...
+* Laura María Pinedo Puertas
+* laurampp95@gmail.com
 
 
