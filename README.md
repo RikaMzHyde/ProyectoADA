@@ -150,7 +150,7 @@ INSERT INTO Empleado_Proyecto (id_empleado, id_proyecto) VALUES
     (30, 10);
 ```
 
-### Ejecución
+## Ejecución
 
 * Pulsar en el archivo .jar adjunto con la práctica y probar las funciones.
 
