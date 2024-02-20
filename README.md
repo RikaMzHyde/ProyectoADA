@@ -6,7 +6,7 @@ Proyecto para la gestión de una Base de Datos llamada "proyecto" la cual cuenta
 
 Este proyecto ha sido creado con la finalidad de desarrollar un Sistema de Gestión de Empleados utilizando Java y aplicando los conceptos y técnicas aprendidas en el módulo de Acceso a Datos del ciclo de desarrollo de aplicaciones multiplataforma (DAM). Éste sistema nos permite gestionar información de los empleados de una empresa utilizando operaciones CRUD. 
 
-### Script utilizado para crear las tablas
+### Script utilizado para crear las tablas y la BD
 
 ```
 -- Crear la base de datos proyecto
@@ -103,7 +103,7 @@ INSERT INTO Empleado (nombre, apellido, fecha_nacimiento, id_departamento, puest
     ('Fernando', 'Vega', '1989-09-28', 6, 'Ejecutivo de Desarrollo de Negocios', 'fernando.vega@gmail.com', '677 445 566');
 
 
-	-- Insertar datos ficticios en la tabla de Proyectos
+-- Insertar datos ficticios en la tabla de Proyectos
 INSERT INTO Proyecto (nombre_proyecto, descripcion, fecha_inicio, fecha_fin) VALUES
     ('Implementación de CRM', 'Implementación de un sistema CRM para mejorar la gestión de relaciones con los clientes', '2023-10-15', '2024-03-31'),
     ('Lanzamiento de Producto XYZ', 'Planificación y ejecución del lanzamiento del producto XYZ en el mercado nacional', '2024-01-15', '2024-06-30'),
@@ -150,10 +150,9 @@ INSERT INTO Empleado_Proyecto (id_empleado, id_proyecto) VALUES
     (30, 10);
 ```
 
-### Instalación
+### Ejecución
 
-* 
-
+* Pulsar en el archivo .jar adjunto con la práctica y probar las funciones.
 
 ## Funcionamiento
 
@@ -231,10 +230,7 @@ En este formulario gestionaremos la tabla Proyectos mediante el uso de diferente
    
 </details>
 
-
 ## Autor y Contacto
 
 * Laura María Pinedo Puertas
 * laurampp95@gmail.com
-
-
