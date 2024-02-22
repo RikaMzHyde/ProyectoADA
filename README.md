@@ -149,6 +149,9 @@ INSERT INTO Empleado_Proyecto (id_empleado, id_proyecto) VALUES
     (29, 9),
     (30, 10);
 ```
+## Requisitos previos
+
+* Tener actualizado el Java de tu entorno, de lo contrario, pueden ocurrir errores al intentar ejecutar el .jar con doble click. 
 
 ## Ejecución
 
